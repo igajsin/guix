@@ -4777,14 +4777,13 @@ locations.")
         (base32
          "1x1rx6agjdah56r50cfs41vyvycydyjdq0plq3jxgvl1q2dar1gw"))))
     (build-system gnu-build-system)
-    (arguments
-     `(#:tests? #f)); no tests
     (inputs
      `(("guile" ,guile-3.0)))
     (native-inputs
      `(("automake" ,automake)
        ("autoconf" ,autoconf)
        ("pkg-config" ,pkg-config)
+       ("guile" ,guile-3.0)                    ;for 'guild compile' + guile.m4
        ("texinfo" ,texinfo)))
     (home-page "https://git.lepiller.eu/guile-netlink")
     (synopsis "Netlink protocol implementation for Guile")
